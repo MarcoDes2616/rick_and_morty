@@ -21,24 +21,29 @@ const Main = () => {
     }, [])
 
     const search = () => {
-        setLoad(true)
-        axios.get(`https://rickandmortyapi.com/api/location/${searchLoc}`)
-            .then(res => {
-                setLocation(res.data)
-                setSearchLoc("")
-                setTimeout(() => {
-                    setLoad(false)
-                }, 1000)
-            })
+        if (searchLoc <= 126){
+            setLoad(true)
+            axios.get(`https://rickandmortyapi.com/api/location/${searchLoc}`)
+                .then(res => {
+                    setLocation(res.data)
+                    setSearchLoc("")
+                    setTimeout(() => {
+                        setLoad(false)
+                    }, 1000)
+                })
+        } else {
+            alert("INVALID INPUT")
+        }
+       
     }
 
     return (
         <div className='main__contain'>
             <div className='input'>
-                <input type="text"
+                <input type="number"
                     value={searchLoc}
                     onChange={(e) => setSearchLoc(e.target.value)}
-                    placeholder="type id" />
+                    placeholder="TYPE ID (1 - 126)" />
                 <button onClick={search}>SEARCH</button>
             </div>
             {
