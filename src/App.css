@@ -40,7 +40,7 @@ input{
     color: rgb(1, 23, 26);
     text-align: center;
 }
-button{
+.btn_search{
     width: 20%;
     height: 25px;
     border-radius: 0 12px 12px 0;
@@ -68,6 +68,26 @@ button{
 .location__info p{
     width: 33%;
     text-align: center;
+}
+.getPages{
+    position: relative;
+    display: flex;
+    width: 350px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.btn__pages{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    background-color: transparent;
+    color: aliceblue;
+}
+.op{
+    opacity: 0;
 }
 .residents__contain{
     width: 100%;

@@ -1,13 +1,15 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const ResidentCard = ({resident}) => {
+const ResidentCard = ({resident, quiteLoading}) => {
 
     const [residentItem, setResidentItem] = useState([])
 
     useEffect(() => {
         axios.get(`${resident}`)
-            .then(res => setResidentItem(res.data))
+            .then(res => {
+                setResidentItem(res.data)
+            })
     }, [])
     
     const bgStatus = () => {
