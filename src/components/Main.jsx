@@ -16,6 +16,7 @@ const Main = () => {
             .then(res => {
                 setLocation(res.data)
                 quiteLoading()
+                setPage(1)
             })
     }, [])
 
@@ -33,6 +34,7 @@ const Main = () => {
                     setLocation(res.data)
                     setSearchLoc("")
                     quiteLoading()
+                    setPage(1)
                 })
         } else {
             alert("INVALID INPUT")

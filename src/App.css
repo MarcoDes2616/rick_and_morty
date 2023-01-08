@@ -111,7 +111,7 @@ input{
     width: 100%;
 }
 .info__status{
-    width: 100px;
+    width: 120px;
     height: 30px;
     background-color: rgba(1, 23, 26, 0.66);
     border-radius: 0 5px 5px 0;
